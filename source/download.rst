@@ -60,6 +60,8 @@ To check out the latest **SciPy** sources:
   svn co http://svn.scipy.org/svn/scipy/trunk scipy
    
 
+.. _software-dist:
+
 Software Distributions that include NumPy/SciPy
 -----------------------------------------------
 

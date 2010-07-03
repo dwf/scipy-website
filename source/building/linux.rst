@@ -5,60 +5,31 @@ Building NumPy & SciPy From Source on Linux
 .. contents::
    :local:
 
-Introduction : source and binaries
-----------------------------------
+Introduction: source and binaries
+---------------------------------
 
- * On Linux, Scipy and Numpy official releases are source-code
-   only. Installing Numpy and Scipy from source is reasonably easy;
-   However, both packages depend on other softwares, some of them
+ * On Linux, SciPy and NumPy official releases are source-code
+   only. Installing NumPy and SciPy from source is reasonably easy;
+   However, both packages depend on other software, some of them
    which can be challenging to install, or shipped with
    incompatibilities by major Linux distributions. Hopefully, you can
-   install Numpy and Scipy without any software outside the necessary
-   tools to build python extensions, as most dependencies are
+   install NumPy and SciPy without any software outside the necessary
+   tools to build Python extensions, as most dependencies are
    optional.
 
- * Most major Linux distributions now ship Numpy and Scipy and,
+ * Most major Linux distributions now ship NumPy and SciPy and,
    although the situation is still far from optimal, those binary
    packages are now reasonably reliable to use. Many other binary
    options are also available, ranging from individually made packages
-   by some scipy developers for a specific Linux version, to whole
+   by some SciPy developers for a specific Linux version, to whole
    commercially-supported scientific distributions. However, keep in
-   mind that if you want to use the last improvements done to Numpy
-   and Scipy on Linux, you have to build it from sources.
+   mind that if you want to use the last improvements done to NumPy
+   and SciPy on Linux, you have to build it from sources.
 
-You will find below some installation instructions and advices for
+You will find below some installation instructions and advice for
 most major distributions.
 
-Fedora Core 8, openSUSE 10.2, RHEL/Centos 5
--------------------------------------------
-
-I (DavidCournapeau) have packaged the last released of numpy, scipy as
-well as lapack and blas dependencies for Fedora Core 8, opensuse 10.2
-and Centos/RHEL 5 and a few others thanks to the opensuse build
-service. I strongly advise you to use those packages instead of the
-"official" ones, which are often unusable. The repository is there:
-
-http://software.opensuse.org/download/home:/ashigabou/
-
-Basic install
-#############
-
-To use this repository with yum, simply pick up your
-arch/distribution, and take the corresponding .repo file. Put this
-.repo file into /etc/yum.repo.d/, and then install numpy/scipy with
-yum::
-
-  yum install python-numpy python-scipy
-
-I also packaged timers and testers for blas and lapack, which can be
-useful if you intend to compile special optimized versions of
-BLAS/LAPACK (eg GOTO or ATLAS). You can also find the package
-lapack3-pic, which can be used to build a complete LAPACK with ATLAS:
-it is a static version, but as it is built with the -fPIC compiler
-flag, it can be used to build python extensions; this is particularly
-useful for x86_64 arch.
-
-Building Atlas
+Building ATLAS
 ##############
 
 ATLAS is a BLAS/LAPACK implementation which tuned itself on the
@@ -66,7 +37,7 @@ machine to provide ideal performances, and often match vendor specific
 implementations. Unfortunately, building ATLAS is not easy.  But, it
 is getting easier all the time.
 
-Building Atlas by Hand
+Building ATLAS by Hand
 ######################
 
 These instructions show how to build ATLAS (and LAPACK) from their
@@ -409,14 +380,14 @@ openSUSE
 (This section reflects the situation of July 2009. If you have newer
 of more accurate information, feel free to modify this section.)
 
-OpenSUSE does not contain '''Numpy''', '''Scipy''' or '''Matplotlib'''
+OpenSUSE does not contain '''NumPy''', '''SciPy''' or '''Matplotlib'''
 in the standard installation. Instead those packages are provided by
 additional repositories, that seem to be run by volunteers. However
 Novell provides webspace for some of those repositories. Packages
 usually exist only for a few current SUSE versions.
 
 The following repositories are currently the best to obtain
-'''Numpy''', '''Scipy''' and '''Matplotlib'''. They can be added to
+'''NumPy''', '''SciPy''' and '''Matplotlib'''. They can be added to
 the package manager ('''YaST''') with the '''Installation Source'''
 dialog. The packages will then appear in the '''Software Management'''
 dialog.
@@ -427,7 +398,7 @@ Alternatively the ``*.rpm`` files can be downloaded and installed manually
 
  * Science: [http://download.opensuse.org/repositories/science/]
 
-   * This repository contains: '''Numpy''', '''Scipy''',
+   * This repository contains: '''NumPy''', '''SciPy''',
      '''Matplotlib''', and many more packages of interest for
      scientific users.
 
@@ -449,7 +420,7 @@ Alternatively the ``*.rpm`` files can be downloaded and installed manually
    continuing development. (The author of this section has also filed
    bug reports in their Bugzilla.)
 
-   * This repository contains: '''Numpy''', '''Scipy''',
+   * This repository contains: '''NumPy''', '''SciPy''',
      '''Matplotlib''', and very many other packages.
 
    * Repository has own Bugzilla:
@@ -458,7 +429,7 @@ Alternatively the ``*.rpm`` files can be downloaded and installed manually
 
    * Tested with openSUSE 11.0 and 11.1, x86-64:
 
-     * openSUSE 11.0: '''broken''' package '''Scipy'''
+     * openSUSE 11.0: '''broken''' package '''SciPy'''
      * openSUSE 11.1: one error in scipy.test(), package seems
        (mostly) functional though.
 
@@ -506,8 +477,8 @@ several hours.
 The
 [http://www.scipy.org/Installing_SciPy/Linux#head-89e1f6afaa3314d98a22c79b063cceee2cc6313c
 build instructions for ATLAS] on this page work, but unfortunately the
-Numpy and Scipy packages don't work with ATLAS.  One could build Numpy
-and Scipy from sources though, and a relatively painless way to do
+NumPy and SciPy packages don't work with ATLAS.  One could build NumPy
+and SciPy from sources though, and a relatively painless way to do
 this is the
 [http://www.scipy.org/Installing_SciPy/Linux#head-f4511786c10fc5a608027f22e65df5e5078357b6
 Sage] package.  (If you know a comfortable way to make ATLAS work on
@@ -637,24 +608,14 @@ it doesn't find the umfpack_libs together).
 ::
 
  cp /usr/lib/gcc/x86_64-linux-gnu/4.2/libgfortran.* ~/scipy_build/lib/
+If you wish to use the System Python, alternate prefix for the installation
+by specifying ``--prefix=<some_directory>`` to your ``python setup.py install``
+command , e.g. ``--prefix=$HOME`` will install to 
+``lib/python2.6/site-packages`` in your home directory. To use libraries
+installed in this way requires you to have the directory in your 
+``PYTHONPATH`` environment variable.
 
-
-
-Build FFTW (3.1.2)
-##################
-
-After untarring, run configure. I ran configure first and extracted
-the suggested FLAGS from the Makefile, then added -fPIC and -m64. (Not
-sure if this is necessary)
-
-::
-
- ./configure --enable-sse2 --enable-threads --with-combined-threads CFLAGS="-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -pthread -fPIC -m64" FFLAGS="-g -O2 -fPIC -m64" CXXFLAGS="-g -O2 -fPIC -m64"
- make
- sudo make install
-
-
-Build Numpy and Scipy
+Build NumPy and SciPy
 #####################
 
 Set the following entries in site.cfg (this will also work with fftw
@@ -680,7 +641,7 @@ if it has been compiled and installed in the default location
  libraries = fftw3
 
 
-Build Numpy and Scipy.
+Build NumPy and SciPy.
 
 ::
 

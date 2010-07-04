@@ -44,7 +44,8 @@ disk image installer, with both ``python-32`` and ``python-64`` executables.
 The filename of the resulting disk image (usually somewhere in ``/tmp``)
 will be printed upon completion.
 
-On Mac OS X 10.6, the System Python is 64-bit.
+On Mac OS X 10.6 and later, the System Python is 64-bit. On
+10.5 and earlier, the System Python is 32-bit.
 
 You can check what version of Python is accessible at the command
 line using the command

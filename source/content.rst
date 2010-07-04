@@ -4,10 +4,18 @@ Scientific Computing Tools For Python
 .. toctree::
     :maxdepth: 1
 
+    getting-started
     download
+    building/linux
+    building/linux-atlas-lapack
+    building/macosx
+    building/windows
     faq
+    bug-report
     mailing-lists
     dev-zone
+    topical-software
+    citing
 
 
 SciPy refers to three related but distinct entities:

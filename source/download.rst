@@ -208,7 +208,7 @@ the package maintainer first, rather than to the NumPy/SciPy mailing lists**.
 | `OpenSUSE`_         | `python-numpy`_,          | `python-scipy`_,          |
 |                     | `python-numpy-devel`_     | `python-scipy-devel`_     |
 +---------------------+---------------------------+---------------------------+
-| `Ubuntu`_           | `python-numpy`__          | `python-scipy`__          |
+| `Ubuntu Linux`_     | `python-numpy`__          | `python-scipy`__          |
 |                     |                           |                           |
 |                     | __ ubuntu-numpy_          | __ ubuntu-scipy_          |
 +---------------------+---------------------------+---------------------------+
@@ -266,6 +266,7 @@ the package maintainer first, rather than to the NumPy/SciPy mailing lists**.
 .. _scipy (slackbuilds.org): http://slackbuilds.org/result/?search=scipy
 
 .. Ubuntu links
+.. _Ubuntu Linux: http://www.ubuntu.com/
 .. _ubuntu-numpy: http://packages.ubuntu.com/search?keywords=python-numpy
 .. _ubuntu-scipy: http://packages.ubuntu.com/search?keywords=python-scipy
 

@@ -7,29 +7,23 @@ Obtaining NumPy & SciPy
 Official Source and Binary Releases
 -----------------------------------
 
-For each official release of NumPy and SciPy, we provide source code 
-(tarball) as well as binary packages for several major platforms. Binary 
-packages for other platforms may be available from your operating system 
+For each official release of NumPy and SciPy, we provide source code
+(tarball) as well as binary packages for several major platforms. Binary
+packages for other platforms may be available from your operating system
 vendor.
 
 +--------+------------------------------+-------------------------------------+
-| Project| Available packages           | Download location                   | 
+| Project| Available packages           | Download location                   |
 +========+==============================+=====================================+
 |        |  Official *source code*      |                                     |
-|        |  (all platforms) and         | `SourceForge site for NumPy`_       |
+| NumPy  |  (all platforms) and         | `SourceForge site for NumPy`_       |
 |        |  *binaries* for **Windows**  |                                     |
-| NumPy  |  & **Mac OS X**              |                                     |
-|        +------------------------------+-------------------------------------+
-|        |  Pre-built *binary* packages | `SciPy PPA on Launchpad`_           |
-|        |  **Ubuntu Linux**            |                                     |
+|        |  & **Mac OS X**              |                                     |
 +--------+------------------------------+-------------------------------------+
 |        |  Official *source code*      |                                     |
-|        |  (all platforms) and         | `SourceForge site for SciPy`_       |
+| SciPy  |  (all platforms) and         | `SourceForge site for SciPy`_       |
 |        |  *binaries* for **Windows**  |                                     |
-| SciPy  |  & **Mac OS X**              |                                     |
-|        +------------------------------+-------------------------------------+
-|        |  Pre-built *binary* packages | `SciPy PPA on Launchpad`_           |
-|        |  **Ubuntu Linux**            |                                     |
+|        |  & **Mac OS X**              |                                     |
 +--------+------------------------------+-------------------------------------+
 
 Build instructions are available for :doc:`linux <building/linux>`,
@@ -58,7 +52,7 @@ To check out the latest **SciPy** sources:
 ::
 
   svn co http://svn.scipy.org/svn/scipy/trunk scipy
-   
+
 
 .. _software-dist:
 
@@ -67,16 +61,16 @@ Software Distributions that include NumPy/SciPy
 
 A number of software distributions exist that bundle NumPy and SciPy along
 with a variety of other tools, including data file manipulation packages,
-visualization tools and more general software development tools. Such 
+visualization tools and more general software development tools. Such
 distributions can be an excellent way to get started with Python for
-scientific computing. 
- 
-We present a list of the most prominent such distributions below. They vary 
-in terms of platform/operating system support, license (free/commercial), 
-packages included, and general focus (general/interactive scientific 
-computing vs. mathematics/computer algebra vs. scientific software/GUI 
-development). If you hope to transition to using Python as your every day 
-scientific computing environment, these distributions are well worth 
+scientific computing.
+
+We present a list of the most prominent such distributions below. They vary
+in terms of platform/operating system support, license (free/commercial),
+packages included, and general focus (general/interactive scientific
+computing vs. mathematics/computer algebra vs. scientific software/GUI
+development). If you hope to transition to using Python as your every day
+scientific computing environment, these distributions are well worth
 investigating.
 
 Enthought Python Distribution
@@ -91,7 +85,7 @@ other tools right out of the box.
 .. _IPython: http://ipython.scipy.org/
 
 It is currently available as a single-click installer for Windows XP (x86),
-Mac OS X (a universal binary for OS X 10.4 and above), RedHat 3, 4 and 5, 
+Mac OS X (a universal binary for OS X 10.4 and above), RedHat 3, 4 and 5,
 as well as Solaris 10 (x86 and x86_64/amd64).
 
 EPD is free for academic use.  An annual subscription including installation
@@ -106,11 +100,11 @@ Python(x,y)
 
 `Python(x,y)`_ is a distribution of free/open source scientific and engineering
 software for Microsoft Windows XP/Vista (although there is an effort underway
-to develop an `Ubuntu Linux version <http://linux.pythonxy.com/ubuntu/>`_) 
-based around `Qt`_ and `Eclipse`_. It aims to provide an environment for 
+to develop an `Ubuntu Linux version <http://linux.pythonxy.com/ubuntu/>`_)
+based around `Qt`_ and `Eclipse`_. It aims to provide an environment for
 interactive scientific computing as well as more development-oriented features
 such as integrated GUI design tools for scientific software development.
-More details as well as downloads are available on at the 
+More details as well as downloads are available on at the
 `Python(x,y) website`__.
 
 __ `Python(x,y)`_
@@ -122,13 +116,13 @@ __ `Python(x,y)`_
 Sage
 ####
 
-`Sage`_ is a monolithic distribution of a wide variety of open source 
-mathematical software available in both source and binary forms for a 
-number of operating systems, including Linux (x86/amd64), Mac OS X, Solaris, 
+`Sage`_ is a monolithic distribution of a wide variety of open source
+mathematical software available in both source and binary forms for a
+number of operating systems, including Linux (x86/amd64), Mac OS X, Solaris,
 and Windows (through VMware Player). A bootable Sage LiveCD is also available.
 
 Sage bundles recent  versions of both NumPy and SciPy, along with its
-own Python interpreter. See the `Sage Installation Guide`_ for installation 
+own Python interpreter. See the `Sage Installation Guide`_ for installation
 instructions.
 
 .. _Sage: http://sagemath.org/
@@ -138,36 +132,25 @@ SciPy Superpack (OS X)
 ######################
 
 The Superpack provides *bleeding edge* binaries of NumPy and SciPy from recent
-Subversion checkouts, maintained by Chris Fonnesbeck. It is available from 
-`MacInScience.org`_.
+Subversion checkouts, maintained by `Chris Fonnesbeck
+<http://stronginference.com>`_. Formerly distributed as an installer, it is now
+provided as a shell script that downloads and installs packages from a
+server Chris maintains. See the `SciPy Superpack website
+<http://stronginference.com/scipy-superpack/>`_ for more details.
 
-.. _MacInScience.org: http://www.macinscience.org/
-
-The Superpack requires Mac OS X 10.5 Leopard with either Apple's preinstalled
-Python 2.5.1, `ActivePython 2.5`_ or `Python 2.5 from Python.org`_. Note that
-the Superpack's version detection may fail with other Python distributions
-(e.g. Python installed by `Fink`_ and `MacPorts`_) and it will refuse to 
-install. If you are using Python provided by Fink or MacPorts it is 
-recommended that you install NumPy/SciPy with the appropriate packages 
+If you are using Python provided by Fink or MacPorts it is
+recommended that you install NumPy/SciPy with the appropriate packages
 (see :ref:`Third-Party/Vendor Package Managers <download-thirdpartypackages>` below).
-
-**NOTE:** NumPy is included in the Superpack.  For best compatibility, it is
-recommended that you use the NumPy provided with the Superpack rather than
-a separately installed version.
-
-.. _ActivePython 2.5: http://www.activestate.com/Products/ActivePython/
-.. _Python 2.5 from Python.org: http://www.python.org/download/releases/2.5.4/
-
 
 Source Python Distribution
 ##########################
 
-`Source Python Distribution (SPD)`_ is a Python distribution based on 
-Sage, containing many optional (mainly scientific) packages that build 
-from source. It contains only a small subset of Sage (an approximately 60 MB 
-download compared with Sage's several hundred megabytes). It bundles recent 
-versions of NumPy and SciPy, and is compatible with Sage's `packages format`_ 
-so that you can selectively install other pieces of software included in 
+`Source Python Distribution (SPD)`_ is a Python distribution based on
+Sage, containing many optional (mainly scientific) packages that build
+from source. It contains only a small subset of Sage (an approximately 60 MB
+download compared with Sage's several hundred megabytes). It bundles recent
+versions of NumPy and SciPy, and is compatible with Sage's `packages format`_
+so that you can selectively install other pieces of software included in
 Sage but not in SPD. See the `SPD website`__ for details.
 
 __ `Source Python Distribution (SPD)`_
@@ -179,21 +162,20 @@ __ `Source Python Distribution (SPD)`_
 Third-Party/Vendor Package Managers
 -----------------------------------
 
-Below is a partial list of third-party and operating system vendor package 
-managers containing NumPy and SciPy packages. 
+Below is a partial list of third-party and operating system vendor package
+managers containing NumPy and SciPy packages.
 
-These packages are **not** maintained by the NumPy and SciPy developers; 
+These packages are **not** maintained by the NumPy and SciPy developers;
 this list is provided only as a convenience. These packages may not always
-provide the most up to date version of the software, and may be 
-unmaintained. Note that `Ubuntu Linux`_ is not listed, as official packages
-are available; see :ref:`Official Source and Binary Releases <download-official>`.
+provide the most up to date version of the software, and may be
+unmaintained.
 
-**IMPORTANT:** If you experience problems with these packages (*especially* 
-those related to installation/build errors), **please report the problem to 
-the package maintainer first, rather than to the NumPy/SciPy mailing lists**. 
+**IMPORTANT:** If you experience problems with these packages (*especially*
+those related to installation/build errors), **please report the problem to
+the package maintainer first, rather than to the NumPy/SciPy mailing lists**.
 
 +---------------------+---------------------------+---------------------------+
-| Distribution        | NumPy Packages            | SciPy Packages            | 
+| Distribution        | NumPy Packages            | SciPy Packages            |
 +=====================+===========================+===========================+
 | `Arch Linux`_       | `python-numpy`__          | `python-scipy`__          |
 |                     |                           |                           |
@@ -225,6 +207,10 @@ the package maintainer first, rather than to the NumPy/SciPy mailing lists**.
 +---------------------+---------------------------+---------------------------+
 | `OpenSUSE`_         | `python-numpy`_,          | `python-scipy`_,          |
 |                     | `python-numpy-devel`_     | `python-scipy-devel`_     |
++---------------------+---------------------------+---------------------------+
+| `Ubuntu`_           | `python-numpy`__          | `python-scipy`__          |
+|                     |                           |                           |
+|                     | __ ubuntu-numpy_          | __ ubuntu-scipy_          |
 +---------------------+---------------------------+---------------------------+
 | `Slackware Linux`_  | `numpy (slackbuilds.org)`_| `scipy (slackbuilds.org)`_|
 +---------------------+---------------------------+---------------------------+
@@ -280,7 +266,8 @@ the package maintainer first, rather than to the NumPy/SciPy mailing lists**.
 .. _scipy (slackbuilds.org): http://slackbuilds.org/result/?search=scipy
 
 .. Ubuntu links
-.. _Ubuntu Linux: http://www.ubuntu.com/
+.. _ubuntu-numpy: http://packages.ubuntu.com/search?keywords=python-numpy
+.. _ubuntu-scipy: http://packages.ubuntu.com/search?keywords=python-scipy
 
 .. FreeBSD links
 .. _FreeBSD Ports: http://www.freebsd.org/ports/
